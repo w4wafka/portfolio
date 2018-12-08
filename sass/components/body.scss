@@ -1,0 +1,99 @@
+.body {
+  margin: 0 auto;
+  width: 320px;
+  position: relative;
+  z-index: 1;
+}
+
+.body__button {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  right: 25px;
+  font-size: 0;
+  z-index: 100;
+  top: -30px;
+}
+
+.body__item--closing {
+  transition: 0.25s;
+  opacity: 0;
+}
+
+.body__item--opening {
+  top: 30px;
+  transition: 0.25s;
+  opacity: 1;
+}
+
+.body__button::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background: black;
+  width: 20px;
+  height: 3px;
+  top: 13px;
+  left: -1px;
+  transform: rotate(-45deg);
+  z-index: -100;
+}
+
+.body__button::before {
+  position: absolute;
+  content: '';
+  display: block;
+  background: black;
+  width: 20px;
+  height: 3px;
+  top: 13px;
+  left: 11px;
+  transform: rotate(45deg);
+  z-index: -100;
+}
+
+@media (min-width: 414px) {
+  .body {
+    width: 414px;
+  }
+
+  .body__button {
+    right: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .body {
+    width: 768px;
+  }
+
+  .body__button {
+    right: 65px;
+  }
+}
+
+@media (min-width: 1248px) {
+  .body {
+    width: 1024px;
+  }
+
+  .body__button {
+    background: rgba(144, 144, 144, 0.1);
+    background: linear-gradient(to right, #fff, #9090904d);
+    width: 200px;
+    right: 0;
+    height: 100%;
+    top: 0;
+    cursor: pointer;
+  }
+
+  .body__button::after {
+    left: 100px;
+    top: 50px;
+  }
+
+  .body__button::before {
+    left: 113px;
+    top: 50px;
+  }
+}
