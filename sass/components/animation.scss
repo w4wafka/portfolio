@@ -1,0 +1,11 @@
+@keyframes close {
+  from {opacity: 1}
+  1% {top: -100px}
+  to {opacity: 0}
+}
+
+@keyframes opening {
+  from {opacity: 0}
+  1% {top: 40px}
+  to {opacity: 1;}
+}

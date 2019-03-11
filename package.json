@@ -1,0 +1,42 @@
+{
+  "name": "sedona",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Седона» от HTML Academy",
+  "devDependencies": {
+    "autoprefixer": "7.1.x",
+    "browser-sync": "2.18.x",
+    "gulp": "3.9.x",
+    "gulp-plumber": "1.1.x",
+    "gulp-postcss": "7.0.x",
+    "gulp-sass": "3.1.x",
+    "gulp-csso": "x.x.x",
+    "gulp-rename": "x.x.x",
+    "gulp-imagemin": "x.x.x",
+    "run-sequence": "x.x.x",
+    "del": "x.x.x",
+    "stylelint": "8.1.x"
+  },
+  "scripts": {
+    "stylelint": "stylelint 'sass/**/*.scss' --syntax scss",
+    "test": "npm run stylelint",
+    "build": "gulp style",
+    "start": "gulp serve"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "8.2"
+  }
+}

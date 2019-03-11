@@ -1,0 +1,23 @@
+.html {
+  width: 320px;
+  margin: 0 auto;
+  min-height: 568px;
+}
+
+@media (min-width: 414px) {
+  .html {
+    width: 414px;
+  }
+}
+
+@media (min-width: 768px) {
+  .html {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: 1248px) {
+  .html {
+    min-width: 1024px;
+  }
+}
