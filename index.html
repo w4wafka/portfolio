@@ -10,32 +10,37 @@
   <body class='body'>
     <span class='body__button'>Домой</span>
     <header class='header'>
+      <span class='header__button'></span>
       <h1 class='header__header'>Someone's shit</h1>
+      <ul class='header__container menu--closed'>
+        <li class='page__item'><a class='header__item' href="#slider">Работы</a></li>
+        <li class='page__item'><a class='header__item' href="#contacts">Контакты</a></li>
+      </ul>
     </header>
     <main class='main'>
       <section class='main__slide  main__slide--first'>
-        <h2 class='main__header'>Жрить</h2>
+        <h2 class='main__header'>Qwerty</h2>
         <p class='main__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </section>
       <section class='main__slide  main__slide--second'>
-        <h2 class='main__header'>Жрять</h2>
+        <h2 class='main__header'>Asdfgh</h2>
         <p class='main__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </section>
       <section class='main__slide  main__slide--third'>
-        <h2 class='main__header'>Ебло тупое</h2>
+        <h2 class='main__header'>Zxcvbn</h2>
         <p class='main__text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </section>
       <nav class='main__slider  slider'>
         <input class="slider__cross slider__cross--hidden slider__cross--first" type="radio" value="1" name="slide" id="slide1" checked>
         <input class="slider__cross slider__cross--hidden slider__cross--second" type="radio" value="2" name="slide" id="slide2">
         <input class="slider__cross slider__cross--hidden slider__cross--third" type="radio" value="3" name="slide" id="slide3">
-        <section class='header__list slider__slides'>
+        <section class='header__list slider__slides' id='slider'>
           <section class='slider__slide slider__slide--first'>
             <h2 class='slider__header'>
               Meh
             </h2>
             <a href="#">
-              <img class='slider__image' src="../img/1.jpg" alt="#">
+              <img class='slider__image' src="../work/img/1.jpg" alt="#">
             </a>
           </section>
           <section class='slider__slide slider__slide--second'>
@@ -43,7 +48,7 @@
               Mehmeh
             </h2>
             <a href="#">
-              <img class='slider__image' src="../img/2.jpg" alt="#">
+              <img class='slider__image' src="../work/img/2.jpg" alt="#">
             </a>
           </section>
           <section class='slider__slide slider__slide--third'>
@@ -51,7 +56,7 @@
               Mehmehmeh
             </h2>
             <a href="#">
-              <img class='slider__image' src="../img/3.jpg" alt="#">
+              <img class='slider__image' src="../work/img/3.jpg" alt="#">
             </a>
           </section>
         </section>
@@ -64,7 +69,7 @@
     </main>
     <footer class='footer'>
       <nav>
-        <ul class='footer__list'>
+        <ul class='footer__list' id='contacts'>
           <li class='footer__container  footer__container--first'>
             <a class='footer__link' href="#">
               VK
@@ -84,5 +89,6 @@
       </nav>
     </footer>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
   </body>
 </html>

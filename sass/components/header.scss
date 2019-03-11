@@ -2,81 +2,106 @@
   margin-bottom: 10px;
   min-height: 80px;
   position: relative;
-  z-index: -11;
+  z-index: 10;
 }
 
 .header__header {
-  font-family: 'Pacifico';
+  font-family: 'Comfortaa';
+  font-weight: 700;
   display: inline-block;
-  margin-left: 40px;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-left: 20px;
+  z-index: 20;
 }
 
-.header__list {
+.header__button {
+  display: block;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: #444;
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  z-index: 100;
+}
+
+.header__container {
   display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
   justify-content: space-around;
   flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transition: 0.5s;
 }
 
-.header__link {
-  display: block;
-  text-align: left;
-  margin-bottom: 10px;
-  margin-right: 25px;
-  padding: 15px 0;
+.menu--closed {
+  top: -500px;
 }
 
-.header::after {
-  content: "";
-  position: fixed;
-  display: block;
-  width: 1000px;
-  height: 300px;
-  left: -300px;
-  top: -200px;
-  background: rgba(144, 144, 144, 0.3);
-  z-index: -10;
-  transform: rotate(-50deg);
-  z-index: -100;
+.menu--opened {
+  top: 0px;
 }
 
-.header::before {
-  content: "";
-  position: fixed;
+.page__item a {
   display: block;
-  width: 1000px;
-  height: 150px;
-  left: -300px;
-  top: 225px;
-  background: rgba(144, 144, 144, 0.2);
-  z-index: -10;
-  transform: rotate(-50deg);
-  z-index: -100;
+  text-align: center;
+  width: 100%;
+  padding: 25px 0;
+  margin-bottom: -1px;
+  color: #444444;
+  font-family: 'Comfortaa';
+  text-decoration: underline;
+  background: rgb(239, 239, 239);
+  border-bottom: 1px solid rgba(144, 144, 144, 0.6);
+  border-top: 1px solid rgba(144, 144, 144, 0.6);
 }
 
 @media (min-width: 768px) {
-  .header::after {
-    width: 1800px;
-    height: 500px;
-    left: -620px;
-  }
-
-  .header::before {
-    width: 1800px;
-    height: 350px;
-    left: -359px;
+  .header {
+    display: flex;
   }
 
   .header__header {
     font-size: 42px;
     margin-left: 60px;
+    width: 30%;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__container {
+    position: relative;
+    top: 0;
+    padding-top: 50px;
+    padding-right: 50px;
+    width: 70%;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .page__item a {
+    height: 30px;
+    width: auto;
+    padding: 0 10px;
+    background: transparent;
+    border: none;
   }
 }
 
 @media (min-width: 1248px) {
   .header__header {
     margin-left: 100px;
+  }
+
+  .header__container {
+    padding-right: 80px;
   }
 }

@@ -26,20 +26,11 @@
   display: none;
 }
 
-.slider__cross--first:checked ~ .slider__slides > .slider__slide--first,
-.slider__cross--second:checked ~ .slider__slides > .slider__slide--second,
-.slider__cross--third:checked ~ .slider__slides > .slider__slide--third {
-  display: block;
-  opacity: 1;
-  z-index: 10;
-  position: relative;
-  transition: 0.5s;
-}
-
 .slider__header {
   margin-left: 10px;
   font-size: 22px;
-  font-family: 'Pacifico';
+  text-align: center;
+  font-family: 'Comfortaa';
 }
 
 .slider__controls {
@@ -60,13 +51,31 @@
   border: 2px solid rgba(202, 202, 202, 1);
   border-radius: 50%;
   background: #fff;
+  transition: 0.25s;
   cursor: pointer;
+  &:hover {
+    background: rgba(232, 232, 232, 0.6);
+    transition: 0.25s;
+  }
+  &:active {
+    background: rgba(212, 212, 212, 1);
+    transition: 0.25s;
+  }
+}
+
+.slider__cross--first:checked ~ .slider__slides > .slider__slide--first,
+.slider__cross--second:checked ~ .slider__slides > .slider__slide--second,
+.slider__cross--third:checked ~ .slider__slides > .slider__slide--third {
+  display: block;
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+  transition: 0.5s;
 }
 
 .slider__cross--first:checked ~ .slider__controls .slider__button--first::after,
 .slider__cross--second:checked ~ .slider__controls .slider__button--second::after,
-.slider__cross--third:checked ~ .slider__controls .slider__button--third::after,
-.slider__cross--fourth:checked ~ .slider__controls .slider__button--fourth::after {
+.slider__cross--third:checked ~ .slider__controls .slider__button--third::after {
   position: absolute;
   content: '';
   display: block;
@@ -91,6 +100,19 @@
   .slider__image {
     width: 350px;
     height: 350px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: 0.5s;
+    &:hover {
+      -webkit-filter: none;
+      filter: none;
+      transition: 0.5s;
+    }
+    &:active {
+      -webkit-filter: none;
+      filter: none;
+      transition: 0.5s;
+    }
   }
 
   .slider__header {
@@ -124,8 +146,7 @@
 
   .slider__cross--first:checked ~ .slider__controls .slider__button--first::after,
   .slider__cross--second:checked ~ .slider__controls .slider__button--second::after,
-  .slider__cross--third:checked ~ .slider__controls .slider__button--third::after,
-  .slider__cross--fourth:checked ~ .slider__controls .slider__button--fourth::after {
+  .slider__cross--third:checked ~ .slider__controls .slider__button--third::after, {
     width: 18px;
     height: 18px;
     margin-left: 2px;

@@ -9,6 +9,19 @@
 .footer__container {
   width: 30px;
   height: 30px;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  transition: 0.25s;
+  &:hover {
+    -webkit-filter: none;
+    filter: none;
+    transition: 0.25s;
+  }
+  &:active {
+    -webkit-filter: none;
+    filter: none;
+    transition: 0.25s;
+  }
 }
 
 .footer__link {
